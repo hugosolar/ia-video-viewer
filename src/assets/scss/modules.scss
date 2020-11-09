@@ -1,0 +1,91 @@
+.video-embed {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  background-color: $black;
+}
+
+.meta-description {
+  .description-header {
+    display: flex;
+    align-items: center;
+    .title {
+      padding-left: 1rem;
+    }
+    .meta-thumbnail {
+      img {
+        border: 6px solid $grey-lighter;
+      }
+    }
+  }
+  .content {
+    padding: 1rem 2.5rem 0 0;
+  }
+}
+
+.meta-list {
+  .term-list {
+    padding: 1rem;
+    border: 2px solid $grey-lighter;
+    .term-item {
+      display: flex;
+      padding-bottom: .5rem;
+      border-bottom: 1px solid $grey-lighter;
+      dt {
+        width: 25%;
+        font-weight: 700;
+      }
+      dd {
+        a {
+          margin-right: .5rem;
+        }
+      }
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+.reviews-list {
+  margin-top: 2rem;
+  .reviews-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+  .review-item {
+    padding: 1.5rem 0;
+    border-top: 1px solid $grey-lighter;
+    .review-title {
+      font-size: 1.2rem;
+      margin-bottom: .5rem;
+      font-weight: 700;
+    }
+    .review-meta {
+      padding: .2rem 0;
+      margin-bottom: .5rem;
+      font-style: italic;
+      font-size: .9rem;
+    }
+  }
+}
+
+ .card {
+   border: 1px solid $grey-lighter;
+   margin-right: .5rem;
+   padding: 1rem;
+   a {
+     display: block;
+   }
+   .card-image {
+     img {
+       width: 100%;
+     }
+   }
+   .card-content {
+     .card-title {
+       font-size: 1.2rem;
+       font-weight: 700;;
+     }
+   }
+ }
