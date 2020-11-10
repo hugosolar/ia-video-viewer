@@ -15,8 +15,8 @@ export default function Related(props) {
   }, [props.id]);
   return(
     <section className={`related-items screen-section`}>
-      <header class={`related-header section-header`}>
-        <h2 class="title">Related items</h2>
+      <header className={`related-header section-header`}>
+        <h2 className="title">Related items</h2>
       </header>
       <CarouselProvider
         naturalSlideWidth={440}
@@ -29,9 +29,8 @@ export default function Related(props) {
         <Slider>
         {
           Object.entries(getRelatedItems).map((value, i) => (
-            <Slide index={i}>
+            <Slide index={i} key={i}>
               <RelatedItem 
-                  key={value[1]._id} 
                   id={value[1]._id} 
                   title={value[1]._source.title} 
                   description={value[1]._source.description} 

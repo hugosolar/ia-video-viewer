@@ -19,8 +19,8 @@ export default function Reviews(props) {
   if ((props.reviews !== undefined) && (props.reviews.length > 0)) {
     return(
       <section className={`reviews-list screen-section`}>
-        <header class={`reviews-header section-header`}>
-          <h2 class="title">Reviews ({props.reviews.length})</h2>
+        <header className={`reviews-header section-header`}>
+          <h2 className="title">Reviews ({props.reviews.length})</h2>
           <button className="button" onClick={handleButton}>{buttonText}</button>
         </header>
         {showHideReviews()}
@@ -36,7 +36,7 @@ function ReviewItem(props) {
   let date = new Date(props.reviewdate);
   let dateFormat = date.toLocaleString('default', {  year: 'numeric', month: 'long', day: 'numeric' });
   return(
-    <article class="review-item">
+    <article className="review-item">
       <h5 className="review-title">{props.reviewtitle}</h5>
       <div className="review-meta">
         <span className="review-author">by <a href={authorLink}>{props.reviewer}</a> </span>

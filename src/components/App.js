@@ -18,9 +18,9 @@ function App() {
               <h1 className="title">Internet Archive Viewer</h1>
               <h3 className="subtitle">You may one to try one of this options below:</h3>
               <div className="container">
-                <div class={`columns is-centered`}>
+                <div className={`columns is-centered`}>
                   <div className={`column is-4`}>
-                    <ul class="link-list">
+                    <ul className="link-list">
                       <li>
                         <Link to="/InformationM">Information Machine, The</Link>
                       </li>

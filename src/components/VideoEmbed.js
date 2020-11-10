@@ -5,7 +5,7 @@ export default function VideoEmbed(props) {
   return (
     <div className="container">
       <section className={`responsive-embed embed-responsive-16by9`}>
-        <iframe className="video-iframe" title={props.id} src={src} width={width} height={height} frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen ></iframe>
+        <iframe className="video-iframe" title={props.id} src={src} width={width} height={height} frameBorder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowFullScreen ></iframe>
       </section>
     </div>
   );

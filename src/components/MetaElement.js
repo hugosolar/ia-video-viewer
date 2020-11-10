@@ -1,10 +1,10 @@
 
-export default function MetaList(props) { 
+export default function MetaList(props) {
   return(
     <div className={`term-list content`}>
       {
         Object.keys(props.metadata).map((key,i) => (
-          <MetaItem term={key} description={props.metadata[key]} />
+          <MetaItem key={i} term={key} description={props.metadata[key]} />
         ))
       }
     </div>
@@ -24,34 +24,27 @@ const filterDescription = (key, value) => {
       }
       break;
       case 'licenseurl':
-        switch (value) {
-          case 'http://creativecommons.org/licenses/publicdomain/':
-            description = <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noreferrer">Creative Commons CC0 Universal Public Domain Dedication</a>
-            break;
-          case 'https://creativecommons.org/licenses/by/4.0/':
-            description = <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution 4.0 International</a>
-            break;
-          case 'http://creativecommons.org/licenses/by-sa/4.0/':
-            description = <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike 4.0 International</a>
-            break;
-          case 'https://creativecommons.org/licenses/by-nc/4.0':
-            description = <a href="https://creativecommons.org/licenses/by-nc/4.0" target="_blank" rel="noreferrer">Creative Commons Attribution-NonCommercial 4.0 International</a>
-            break;
-          case 'https://creativecommons.org/licenses/by-nc-sa/4.0':
-            description = <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>
-            break;
-          case 'https://creativecommons.org/licenses/by-nc-nd/4.0':
-            description = <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" target="_blank" rel="noreferrer">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>
-            break;
-          case 'https://creativecommons.org/licenses/by-nd/4.0':
-            description = <a href="https://creativecommons.org/licenses/by-nd/4.0" target="_blank" rel="noreferrer">Creative Commons Attribution-NoDerivatives 4.0 International</a>
-            break;
-          case 'https://creativecommons.org/publicdomain/zero/1.0/':
-            description = <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noreferrer">Creative Commons CC0 Universal Public Domain Dedication</a>
-            break;
-          default:
-            description = <a href={value}>{value}</a>
-            break;
+        if (value.indexOf('creativecommons')) {
+          if (value.indexOf('publicdomain')) {
+            description = <a href={value} target="_blank" rel="noreferrer">Creative Commons CC0 Universal Public Domain Dedication</a>
+          }
+          if (value.indexOf('/by/')) {
+            description = <a href={value} target="_blank" rel="noreferrer">Creative Commons Attribution</a>
+          }
+          if (value.indexOf('/by-sa/')) {
+            description = <a href={value} target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike</a>
+          }
+          if (value.indexOf('/by-nc-sa/')) {
+            description = <a href={value} target="_blank" rel="noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike</a>
+          }
+          if (value.indexOf('/by-nc-nd/')) {
+            description = <a href={value} target="_blank" rel="noreferrer">Creative Commons Attribution-NonCommercial-NoDerivatives</a>
+          }
+          if (value.indexOf('/by-nd/')) {
+            description = <a href={value} target="_blank" rel="noreferrer">Creative Commons Attribution-NoDerivatives</a>
+          }
+        } else {
+          description = <a href={value} target="_blank" rel="noreferrer">{value}</a>
         }
       break;
       case 'date': 
