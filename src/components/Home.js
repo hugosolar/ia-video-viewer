@@ -39,8 +39,8 @@ export default function Home(props) {
             <hr></hr>
           </div>
         </div>
-        <Related id={id} />
       </div>
+      <Related id={id} />
     </div>
   );
 }

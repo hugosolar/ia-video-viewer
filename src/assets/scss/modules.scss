@@ -106,9 +106,12 @@
 }
 
  .card {
-   border: 1px solid $grey-lighter;
+   border: 1px solid $grey-light;
    margin-right: .5rem;
    padding: 1rem;
+   &.white {
+     background-color: $white;
+   }
    a {
      display: block;
      color: $black;
@@ -145,7 +148,11 @@
  }
 
 .related-items {
-  margin-bottom: 3rem;;
+  padding: 2rem 0;
+  margin-bottom: 3rem;
+  background-color: $grey-lighter;
+  border-top: 2px solid $grey-light;
+  box-shadow: inset 1px 1px 8px rgba($grey-dark,.2);
   .related-header {
     margin-bottom: 2rem;
   }

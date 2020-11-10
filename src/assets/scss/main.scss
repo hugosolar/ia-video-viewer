@@ -3,11 +3,9 @@ body {
     overflow-x: hidden;
   }
 }
-.Hom, .App {
-  .container {
-    @include mobile() {
-      padding-left: .5rem;
-      padding-right: 1rem;
-    }
+.container {
+  @include mobile() {
+    padding-left: .5rem;
+    padding-right: 1rem;
   }
 }

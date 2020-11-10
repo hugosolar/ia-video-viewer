@@ -14,36 +14,39 @@ export default function Related(props) {
     });
   }, [props.id]);
   return(
+
     <section className={`related-items screen-section`}>
-      <header className={`related-header section-header`}>
-        <h2 className="title">Related items</h2>
-      </header>
-      <CarouselProvider
-        naturalSlideWidth={440}
-        naturalSlideHeight={415}
-        totalSlides={getRelatedItems.length}
-        visibleSlides={3}
-        infinite={true}
-        isIntrinsicHeight
-      >
-        <Slider>
-        {
-          Object.entries(getRelatedItems).map((value, i) => (
-            <Slide index={i} key={i}>
-              <RelatedItem 
-                  id={value[1]._id} 
-                  title={value[1]._source.title} 
-                  description={value[1]._source.description} 
-                  downloads={value[1]._source.downloads} 
-                  mediatype={value[1]._source.mediatype} 
-                />
-              </Slide>
-          ))
-        }
-        </Slider>
-        <ButtonBack><FontAwesomeIcon icon={faChevronLeft} /> </ButtonBack>
-        <ButtonNext><FontAwesomeIcon icon={faChevronRight} /></ButtonNext>
-      </CarouselProvider>
+      <div className="container">
+        <header className={`related-header section-header`}>
+          <h2 className="title">Related items</h2>
+        </header>
+        <CarouselProvider
+          naturalSlideWidth={440}
+          naturalSlideHeight={415}
+          totalSlides={getRelatedItems.length}
+          visibleSlides={3}
+          infinite={true}
+          isIntrinsicHeight
+        >
+          <Slider>
+          {
+            Object.entries(getRelatedItems).map((value, i) => (
+              <Slide index={i} key={i}>
+                <RelatedItem 
+                    id={value[1]._id} 
+                    title={value[1]._source.title} 
+                    description={value[1]._source.description} 
+                    downloads={value[1]._source.downloads} 
+                    mediatype={value[1]._source.mediatype} 
+                  />
+                </Slide>
+            ))
+          }
+          </Slider>
+          <ButtonBack><FontAwesomeIcon icon={faChevronLeft} /> </ButtonBack>
+          <ButtonNext><FontAwesomeIcon icon={faChevronRight} /></ButtonNext>
+        </CarouselProvider>
+      </div>
     </section>
   );
 }
@@ -52,7 +55,7 @@ function RelatedItem(props) {
   let img_link = `https://archive.org/services/img/${props.id}`;
   let related_link = `/${props.id}`;
  return(
-   <article className="related-item card">
+   <article className={`related-item card white`}>
       <Link to={related_link}>
         <figure className="card-image">
           <img src={img_link} alt={props.title} />
