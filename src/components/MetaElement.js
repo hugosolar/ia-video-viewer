@@ -68,9 +68,6 @@ const filterDescription = (key, value) => {
           });
         }
       break;
-      case 'licenseurl':
-
-        break;
       default:
         if (Array.isArray(value)) {
             description = value.join(', ');

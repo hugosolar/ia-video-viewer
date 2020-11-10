@@ -3,6 +3,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 Please note this is my first React applications, so the folder structure and some methods are not perfect :)
 
+You can see this deployed here: https://hs-ia-video-viewer.netlify.app
+
 ## Available Scripts
 
 In the project directory, you can run:
