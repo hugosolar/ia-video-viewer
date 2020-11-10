@@ -5,6 +5,8 @@ Please note this is my first React applications, so the folder structure and som
 
 You can see this deployed here: https://hs-ia-video-viewer.netlify.app
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/bce0246a-b4e1-496b-948d-35baa6f2c046/deploy-status)](https://app.netlify.com/sites/hs-ia-video-viewer/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
