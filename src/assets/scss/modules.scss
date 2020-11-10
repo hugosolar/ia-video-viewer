@@ -53,9 +53,21 @@
         a {
           margin-right: .5rem;
         }
+        @include mobile() {
+          word-break: break-word;
+        }
       }
       &:last-child {
         border-bottom: 0;
+      }
+    }
+  }
+  @include mobile() {
+    .term-list {
+      .term-item {
+        dt {
+          width: 40%;
+        }
       }
     }
   }
@@ -80,6 +92,15 @@
       margin-bottom: .5rem;
       font-style: italic;
       font-size: .9rem;
+    }
+  }
+}
+.screen-section {
+  @include mobile() {
+    .section-header {
+      .title {
+        font-size: 1.5rem;
+      }
     }
   }
 }
@@ -110,6 +131,17 @@
      font-style: italic;
      color: $grey-dark;
    }
+   @include mobile() {
+     padding: .2rem;
+     .card-content {
+       .card-title {
+         font-size: .8rem;
+       }
+     }
+     .card-meta {
+       display: none;
+     }
+   }
  }
 
 .related-items {
@@ -132,6 +164,20 @@
       position: absolute;
       right: -2rem;
       @include absolute-vert-center;
+    }
+    @include mobile() {
+      .carousel__back-button {
+        top: -4rem;
+        bottom: auto;
+        right: 3rem;
+        left: auto;
+      }
+      .carousel__next-button {
+        top: -4rem;
+        bottom: auto;
+        right: 0rem;
+        left: auto;
+      }
     }
   }
 }

@@ -18,8 +18,8 @@ export default function Reviews(props) {
   };
   if (props.reviews.length > 0) {
     return(
-      <section className="reviews-list">
-        <header class="reviews-header">
+      <section className={`reviews-list screen-section`}>
+        <header class={`reviews-header section-header`}>
           <h2 class="title">Reviews ({props.reviews.length})</h2>
           <button className="button" onClick={handleButton}>{buttonText}</button>
         </header>

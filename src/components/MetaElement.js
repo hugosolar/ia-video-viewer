@@ -23,8 +23,40 @@ const filterDescription = (key, value) => {
         description = value;
       }
       break;
-      case 'description':
-
+      case 'licenseurl':
+        switch (value) {
+          case 'http://creativecommons.org/licenses/publicdomain/':
+            description = <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noreferrer">Creative Commons CC0 Universal Public Domain Dedication</a>
+            break;
+          case 'https://creativecommons.org/licenses/by/4.0/':
+            description = <a href="http://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution 4.0 International</a>
+            break;
+          case 'http://creativecommons.org/licenses/by-sa/4.0/':
+            description = <a href="http://creativecommons.org/licenses/by-sa/4.0/" target="_blank" rel="noreferrer">Creative Commons Attribution-ShareAlike 4.0 International</a>
+            break;
+          case 'https://creativecommons.org/licenses/by-nc/4.0':
+            description = <a href="https://creativecommons.org/licenses/by-nc/4.0" target="_blank" rel="noreferrer">Creative Commons Attribution-NonCommercial 4.0 International</a>
+            break;
+          case 'https://creativecommons.org/licenses/by-nc-sa/4.0':
+            description = <a href="https://creativecommons.org/licenses/by-nc-sa/4.0" target="_blank" rel="noreferrer">Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International</a>
+            break;
+          case 'https://creativecommons.org/licenses/by-nc-nd/4.0':
+            description = <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" target="_blank" rel="noreferrer">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International</a>
+            break;
+          case 'https://creativecommons.org/licenses/by-nd/4.0':
+            description = <a href="https://creativecommons.org/licenses/by-nd/4.0" target="_blank" rel="noreferrer">Creative Commons Attribution-NoDerivatives 4.0 International</a>
+            break;
+          case 'https://creativecommons.org/publicdomain/zero/1.0/':
+            description = <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank" rel="noreferrer">Creative Commons CC0 Universal Public Domain Dedication</a>
+            break;
+          default:
+            description = <a href={value}>{value}</a>
+            break;
+        }
+      break;
+      case 'date': 
+        let link = `https://archive.org/search.php?query=date:${value}`;
+        description = <a href={link} target="_blank" rel="noreferrer">{value}</a>
       break;
       case 'subject':
         let testValue = value.split(';');
@@ -36,6 +68,9 @@ const filterDescription = (key, value) => {
           });
         }
       break;
+      case 'licenseurl':
+
+        break;
       default:
         if (Array.isArray(value)) {
             description = value.join(', ');

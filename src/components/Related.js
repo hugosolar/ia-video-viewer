@@ -14,13 +14,13 @@ export default function Related(props) {
     });
   }, [props.id]);
   return(
-    <section className="related-items">
-      <header class="related-header">
+    <section className={`related-items screen-section`}>
+      <header class={`related-header section-header`}>
         <h2 class="title">Related items</h2>
       </header>
       <CarouselProvider
-        naturalSlideWidth={100}
-        naturalSlideHeight={100}
+        naturalSlideWidth={440}
+        naturalSlideHeight={415}
         totalSlides={getRelatedItems.length}
         visibleSlides={3}
         infinite={true}
