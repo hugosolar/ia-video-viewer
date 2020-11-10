@@ -1,3 +1,17 @@
+.App {
+  padding-top: 2rem;
+}
+.link-list {
+  text-align: left;
+  li {
+    a {
+      display: block;
+      padding-bottom: .5rem;
+      margin-bottom: .5rem;
+      border-bottom: 1px solid $grey-lighter;
+    }
+  }
+}
 .video-embed {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -76,6 +90,7 @@
    padding: 1rem;
    a {
      display: block;
+     color: $black;
    }
    .card-image {
      img {
@@ -87,6 +102,13 @@
        font-size: 1.2rem;
        font-weight: 700;;
      }
+   }
+   .card-meta {
+     display: flex;
+     justify-content: space-between;
+     margin-top: 1rem;
+     font-style: italic;
+     color: $grey-dark;
    }
  }
 

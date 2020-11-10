@@ -4,7 +4,7 @@ import { RelatedItems } from '../api/Metadata';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
+import { faChevronLeft, faChevronRight, faPhotoVideo, faEye } from '@fortawesome/free-solid-svg-icons'
 
 export default function Related(props) {
   const [getRelatedItems, setRelatedItems] = useState({});
@@ -20,7 +20,7 @@ export default function Related(props) {
       </header>
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={90}
+        naturalSlideHeight={100}
         totalSlides={getRelatedItems.length}
         visibleSlides={3}
         infinite={true}
@@ -60,8 +60,8 @@ function RelatedItem(props) {
         <span className="card-content">
           <h4 className="card-title">{props.title}</h4>
           <span className="card-meta">
-            <span className="mediatype">{props.mediatype}</span>
-            <span className="downloads">{props.downloads}</span>
+            <span className="mediatype"><FontAwesomeIcon icon={faPhotoVideo} /> {props.mediatype}</span>
+            <span className="downloads"><FontAwesomeIcon icon={faEye} /> {props.downloads}</span>
           </span>
         </span>
       </Link>
