@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { RelatedItems } from '../api/Metadata';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 export default function Related(props) {
   const [getRelatedItems, setRelatedItems] = useState({});
@@ -13,12 +15,12 @@ export default function Related(props) {
   }, [props.id]);
   return(
     <section className="related-items">
-      <header class="reviews-header">
+      <header class="related-header">
         <h2 class="title">Related items</h2>
       </header>
       <CarouselProvider
         naturalSlideWidth={100}
-        naturalSlideHeight={125}
+        naturalSlideHeight={90}
         totalSlides={getRelatedItems.length}
         visibleSlides={3}
         infinite={true}
@@ -39,8 +41,8 @@ export default function Related(props) {
           ))
         }
         </Slider>
-        <ButtonBack>Back</ButtonBack>
-        <ButtonNext>Next</ButtonNext>
+        <ButtonBack><FontAwesomeIcon icon={faChevronLeft} /> </ButtonBack>
+        <ButtonNext><FontAwesomeIcon icon={faChevronRight} /></ButtonNext>
       </CarouselProvider>
     </section>
   );

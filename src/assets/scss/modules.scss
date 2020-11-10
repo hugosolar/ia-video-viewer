@@ -89,3 +89,27 @@
      }
    }
  }
+
+.related-items {
+  margin-bottom: 3rem;;
+  .related-header {
+    margin-bottom: 2rem;
+  }
+  .carousel {
+    position: relative;
+    .carousel__back-button {
+      @extend .button;
+      @extend .is-dark;
+      position: absolute;
+      left: -2rem;
+      @include absolute-vert-center;
+    }
+    .carousel__next-button {
+      @extend .button;
+      @extend .is-dark;
+      position: absolute;
+      right: -2rem;
+      @include absolute-vert-center;
+    }
+  }
+}

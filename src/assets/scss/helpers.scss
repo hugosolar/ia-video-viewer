@@ -28,3 +28,9 @@
 .embed-responsive-4by3 {
   padding-bottom: 75%;
 }
+
+@mixin absolute-vert-center() {
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
