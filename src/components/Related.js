@@ -1,8 +1,5 @@
 import { useState, useEffect } from 'react';
-import {
-  BrowserRouter as Router,
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 import { RelatedItems } from '../api/Metadata';
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
@@ -13,7 +10,7 @@ export default function Related(props) {
     RelatedItems(props.id).then((data) => { 
       setRelatedItems(data.hits.hits);
     });
-  }, []);
+  }, [props.id]);
   return(
     <section className="related-items">
       <header class="reviews-header">

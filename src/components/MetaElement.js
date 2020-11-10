@@ -15,9 +15,9 @@ const filterDescription = (key, value) => {
   switch (key) {
     case 'collection':
       if (Array.isArray(value)) {
-        value.map((content) => { 
+        value.forEach((content) => { 
           let link = `https://archive.org/details/${content}`;
-          description.push( <a href={link} target="_blank">{content}</a> );
+          description.push( <a href={link} target="_blank" rel="noreferrer">{content}</a> );
         });
       } else {
         description = value;
@@ -29,10 +29,10 @@ const filterDescription = (key, value) => {
       case 'subject':
         let testValue = value.split(';');
         if (Array.isArray(testValue)) {
-          testValue.map((content) => {
+          testValue.forEach((content) => {
             let query = `subject:"${content}"`;
             let link = `https://archive.org/search.php?query=${encodeURI(query)}`;
-            description.push( <a href={link} target="_blank">{content}</a> );
+            description.push( <a href={link} target="_blank" rel="noreferrer">{content}</a> );
           });
         }
       break;
@@ -49,7 +49,7 @@ const filterDescription = (key, value) => {
 function MetaItem(props) {  
   let filteredDescription = filterDescription(props.term, props.description);
   //let filteredDescription = props.description;
-  if (props.term != 'description') {
+  if (props.term !== 'description') {
     return(
       <dl className="term-item">
         <dt>{props.term}</dt>
