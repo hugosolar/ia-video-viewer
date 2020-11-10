@@ -24,6 +24,7 @@ export default function Related(props) {
         totalSlides={getRelatedItems.length}
         visibleSlides={3}
         infinite={true}
+        isIntrinsicHeight
       >
         <Slider>
         {

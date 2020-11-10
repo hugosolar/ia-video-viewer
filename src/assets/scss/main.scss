@@ -3,7 +3,7 @@ body {
     overflow-x: hidden;
   }
 }
-.Home {
+.Hom, .App {
   .container {
     @include mobile() {
       padding-left: .5rem;

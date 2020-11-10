@@ -30,6 +30,12 @@ function App() {
                       <li>
                         <Link to="/electricsheep-flock-244-32500-3">electricsheep-flock-244-32500-3</Link>
                       </li>
+                      <li>
+                        <Link to="/twitter-1293849600487546880">Cat Life 🐱 - Army cat marching!</Link>
+                      </li>
+                      <li>
+                        <Link to="/pn006">Memorias de un Calabozo [PN006]</Link>
+                      </li>
                     </ul>
                   </div>
                 </div>

@@ -16,7 +16,7 @@ export default function Reviews(props) {
       return null;
     }
   };
-  if (props.reviews.length > 0) {
+  if ((props.reviews !== undefined) && (props.reviews.length > 0)) {
     return(
       <section className={`reviews-list screen-section`}>
         <header class={`reviews-header section-header`}>
