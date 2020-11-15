@@ -1,8 +1,10 @@
 # Internet Archive video viewer
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
 You can see this deployed here: https://hs-ia-video-viewer.netlify.app
-You can use this project with any video ID from the Archive. for instance for this URL https://archive.org/details/Popeye_forPresident the `ID` is: `Popeye_forPresident` so we can take that ID and use it with this project https://hs-ia-video-viewer.netlify.app/Popeye_forPresident and you'll see it rendered in the application
+
+You can use this project with any video ID from the Archive. for instance for this URL https://archive.org/details/Popeye_forPresident the `ID` is: `Popeye_forPresident` so we can take that ID and use it with this project https://hs-ia-video-viewer.netlify.app/Popeye_forPresident 
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/bce0246a-b4e1-496b-948d-35baa6f2c046/deploy-status)](https://app.netlify.com/sites/hs-ia-video-viewer/deploys)
 
